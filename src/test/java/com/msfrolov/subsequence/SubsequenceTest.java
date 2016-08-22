@@ -13,13 +13,13 @@ public class SubsequenceTest {
 
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(SubsequenceTest.class);
 
-    Subsequence subsequence = new SubsequenceImpl();
+    private final Subsequence subsequence = new SubsequenceImpl();
 
     @Test public void subsequenceTest1() {
         List<String> xI = new ArrayList<>(Arrays.asList("maxim".split("")));
         List<String> yI = new ArrayList<>(Arrays.asList("qmqaqxytjtjtykyliol;l;pxqio;poimpoqq".split("")));
         boolean b = subsequence.find(xI, yI);
-        log.info("answer = {}", b);
+        log.info("answer = {}", b);  //it should be true
         assertTrue(b);
     }
 
@@ -28,14 +28,14 @@ public class SubsequenceTest {
         List<String> yI = new ArrayList<>(Arrays.asList("qmqaqxFytjtjtykryliol;l;poxqio;polimpoqqV".split("")));
         boolean b = subsequence.find(xI, yI);
         log.info("answer = {}", b);
-        assertTrue(!b);
+        assertTrue(!b);   //it should be false
     }
 
     @Test public void subsequenceTest3() {
         List<String> xI = new ArrayList<>(Arrays.asList("JAVA".split("")));
         List<String> yI = new ArrayList<>(Arrays.asList("qmqaqxFJytjtjtyAkryliol;l;Vpoxqio;polimpoqqVa".split("")));
         boolean b = subsequence.find(xI, yI);
-        log.info("answer = {}", b);
+        log.info("answer = {}", b);  //it should be false
         assertTrue(!b);
     }
 
@@ -43,7 +43,7 @@ public class SubsequenceTest {
         List<String> xI = new ArrayList<>(Arrays.asList("JAVA".split("")));
         List<String> yI = new ArrayList<>(Arrays.asList("qmqaqxFJytjtjtyAkryliol;l;Vpoxqio;VpoliAmpoqq".split("")));
         boolean b = subsequence.find(xI, yI);
-        log.info("answer = {}", b);
-        assertTrue(!b);
+        log.info("answer = {}", b); //it should be true
+        assertTrue(b);
     }
 }

@@ -7,8 +7,8 @@ public interface Subsequence {
     /**
      * Search xI sequence in sequence yI in the same direction of the order
      *
-     * @param xI
-     * @param yI
+     * @param xI which the are looking for
+     * @param yI wherein is sought
      * @return
      */
     boolean find(List xI, List yI);
