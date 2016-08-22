@@ -10,5 +10,5 @@ public interface Duplicates {
      * @param sourceFile
      * @param outputFile
      */
-    boolean handle(File sourceFile, File outputFile);
+    boolean process(File sourceFile, File outputFile);
 }

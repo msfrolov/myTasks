@@ -20,7 +20,7 @@ public class DuplicatesImpl implements Duplicates {
      * @param sourceFile
      * @param outputFile
      */
-    @Override public boolean handle(File sourceFile, File outputFile) {
+    @Override public boolean process(File sourceFile, File outputFile) {
         Map<String, Integer> map = new TreeMap<>();
         String line;
         try (BufferedReader reader = new BufferedReader(new FileReader(sourceFile));

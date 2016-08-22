@@ -19,7 +19,7 @@
 
         <slf4j.ver>1.6.4</slf4j.ver>
         <logback.ver>1.0.1</logback.ver>
-        
+
         <junit.ver>4.12</junit.ver>
     </properties>
 
@@ -30,6 +30,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
+
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
